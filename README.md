@@ -5,9 +5,12 @@ usando o método que foi desenvolvido e testado em três projetos irmãos:
 
 | Projeto | Jogo | Particularidade |
 |---|---|---|
-| `~/development/snes-rea` | Top Gear (1992) | ROM de 512 KB, código **descomprimido para a WRAM** em tempo de execução; tem randomizador de pistas |
-| `~/development/tg2-re` | Top Gear 2 | ROM de 1 MB, todo o código roda direto da ROM; ferramentas de descompressão, senhas, patches |
-| `~/development/tg3000-re` | Top Gear 3000 | Cartucho com coprocessador **DSP-4**; é o projeto mais recente (fase 2 → 3) |
+| [`snes-rea`](https://github.com/pedro-walter/top-gear-snes-re) (GitHub: `top-gear-snes-re`) | Top Gear (1992) | ROM de 512 KB, código **descomprimido para a WRAM** em tempo de execução; tem randomizador de pistas |
+| `tg2-re` (GitHub: `top-gear-2-snes-re`, repositório privado, sem link público) | Top Gear 2 | ROM de 1 MB, todo o código roda direto da ROM; ferramentas de descompressão, senhas, patches |
+| [`tg3000-re`](https://github.com/pedro-walter/tg3000-re) | Top Gear 3000 | Cartucho com coprocessador **DSP-4**; é o projeto mais recente (fase 2 → 3) |
+
+Nos capítulos, caminhos como `tg3000-re/docs/…` ou `snes-rea/tools/…` referem-se a esses repositórios clonados lado a lado
+(por exemplo, todos dentro de `~/development`).
 
 Os exemplos usam principalmente o Top Gear 3000, mas **o método vale para qualquer jogo LoROM/HiROM**.
 Nenhum desses repositórios contém ROMs ou código do jogo: você precisa da sua própria ROM, obtida legalmente.
@@ -52,3 +55,9 @@ Leia na ordem se você é iniciante; pule direto para o que precisa se já tem e
 
 > Dica: os arquivos `CLAUDE.md` de cada repositório são o "resumo executivo" do estado do projeto — ótimo
 > ponto de retomada mesmo para humanos.
+
+## Repositórios de exemplo
+
+* **Top Gear (TG1)** — <https://github.com/pedro-walter/top-gear-snes-re>: física, nitro, IA, pit stops, pistas, senhas e o **randomizador** (veja `src/*.asm` e `tools/build_rando.py` para hooks e montador).
+* **Top Gear 3000** — <https://github.com/pedro-walter/tg3000-re>: ambiente headless com DSP-4, presets de menu, patches de dados (`tools/patch.py`, `docs/08-patches.md`).
+* **Top Gear 2** — repositório privado (`pedro-walter/top-gear-2-snes-re`); as referências a ele neste guia (compressão, senha, som, `docs/13-mod-index.md`) servem apenas como descrição do método.
